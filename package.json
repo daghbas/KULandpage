@@ -35,7 +35,7 @@
     "wrangler": "^4.33.0"
   },
   "scripts": {
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d docs",
     "build": "tsc -b && vite build",
     "cf-typegen": "wrangler types",
     "check": "tsc && vite build && wrangler deploy --dry-run",
