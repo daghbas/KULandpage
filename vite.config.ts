@@ -5,18 +5,22 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 import { mochaPlugins } from "@getmocha/vite-plugins";
 
 export default defineConfig({
-  base: "/KULandpage/",
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  plugins: [...mochaPlugins(process.env as any), react(), cloudflare()],
+  base: "/KULandpage/", // تأكد أن هذا هو اسم المستودع على GitHub
+  plugins: [
+    ...mochaPlugins(process.env as any),
+    react(),
+    cloudflare()
+  ],
   server: {
     allowedHosts: true,
   },
   build: {
+    outDir: "docs", // يجعل ملفات البناء تذهب مباشرة إلى docs للنشر
     chunkSizeWarningLimit: 5000,
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "src"),
     },
   },
 });
