@@ -6,3 +6,4 @@ custom-software.webp
 landing-pages.webp
 academic-reports.webp
 graphic-design.webp
+zip_uploaded_to_repo=true
