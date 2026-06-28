@@ -1,0 +1,8 @@
+hero-ecosystem.webp
+graduation-project-1.webp
+graduation-project-2.webp
+web-programming.webp
+custom-software.webp
+landing-pages.webp
+academic-reports.webp
+graphic-design.webp
