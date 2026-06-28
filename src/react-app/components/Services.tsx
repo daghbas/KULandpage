@@ -1,127 +1,98 @@
-import { Battery, Circle, Wrench, Shield, Clock, Star } from 'lucide-react';
+import { Battery, Circle, Clock3, ShieldCheck, Sparkles, Wrench } from 'lucide-react';
+import serviceImageOne from '../../../assets/images/graduation-project-1.webp';
+import serviceImageTwo from '../../../assets/images/graduation-project-2.webp';
+import serviceImageThree from '../../../assets/images/graphic-design.webp';
 
 export default function Services() {
   const services = [
     {
       icon: Circle,
-      title: "تبديل الإطارات",
-      description: "تبديل سريع واحترافي لجميع أنواع الإطارات في موقعك",
-      features: ["جميع المقاسات متوفرة", "إطارات أصلية عالية الجودة", "تركيب احترافي وآمن"],
-      image: "https://mocha-cdn.com/0199a6e3-aa03-7d21-a627-6de5590066c7/tire-service-action.jpg"
+      title: 'تبديل الإطارات',
+      description: 'تبديل سريع واحترافي لجميع الأنواع مع التركيز على الأمان والسرعة.',
+      features: ['جميع المقاسات متوفرة', 'إطارات أصلية عالية الجودة', 'تركيب احترافي وآمن'],
+      image: serviceImageOne
     },
     {
       icon: Battery,
-      title: "تبديل البطاريات",
-      description: "بطاريات عالية الجودة مع فحص شامل للنظام الكهربائي",
-      features: ["بطاريات أصلية معتمدة", "فحص مجاني للنظام", "ضمان لمدة سنة كاملة"],
-      image: "https://mocha-cdn.com/0199a6e3-aa03-7d21-a627-6de5590066c7/battery-service-action.jpg"
+      title: 'تبديل البطاريات',
+      description: 'بطاريات عالية الجودة مع فحص شامل للنظام الكهربائي قبل التركيب.',
+      features: ['بطاريات أصلية معتمدة', 'فحص مجاني للنظام', 'ضمان لمدة سنة كاملة'],
+      image: serviceImageTwo
     },
     {
       icon: Wrench,
-      title: "إصلاحات طارئة",
-      description: "حلول سريعة وموثوقة للأعطال الطارئة في الطريق",
-      features: ["تشخيص دقيق وسريع", "إصلاح فوري للأعطال", "قطع غيار أصلية متوفرة"],
-      image: "https://mocha-cdn.com/0199a6e3-aa03-7d21-a627-6de5590066c7/emergency-repair-service.jpg"
+      title: 'إصلاحات طارئة',
+      description: 'حلول سريعة وموثوقة للأعطال الطارئة في الطريق أو في المكان.',
+      features: ['تشخيص دقيق وسريع', 'إصلاح فوري للأعطال', 'قطع غيار أصلية متوفرة'],
+      image: serviceImageThree
     }
   ];
 
   const benefits = [
-    {
-      icon: Clock,
-      title: "سرعة في الاستجابة",
-      description: "نصل إليك خلال 15-30 دقيقة في جميع أنحاء الكويت"
-    },
-    {
-      icon: Shield,
-      title: "ضمان وثقة",
-      description: "ضمان شامل على جميع الخدمات والقطع المستخدمة"
-    },
-    {
-      icon: Star,
-      title: "خدمة متميزة",
-      description: "تقييم ممتاز من آلاف العملاء الراضين"
-    }
+    { icon: Clock3, title: 'سرعة في الاستجابة', description: 'نصل إليك خلال 15–30 دقيقة في جميع أنحاء الكويت.' },
+    { icon: ShieldCheck, title: 'ضمان وثقة', description: 'ضمان شامل على الخدمات والقطع المستخدمة مع متابعة مهنية.' },
+    { icon: Sparkles, title: 'خدمة متميزة', description: 'تقييم ممتاز من آلاف العملاء الراضين عن كل عملية.' }
   ];
 
   return (
-    <section className="py-20 bg-stone-50" dir="rtl">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Services Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block bg-indigo-700 text-stone-50 px-6 py-3 rounded-full font-semibold mb-6">
+    <section id="services" className="bg-stone-50 py-20" dir="rtl">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 text-center">
+          <div className="mb-6 inline-flex items-center rounded-full bg-indigo-700 px-6 py-3 text-sm font-semibold text-stone-50">
             خدماتنا المتخصصة
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-6 leading-tight">
-            خدمات شاملة وموثوقة
+          <h2 className="mb-6 text-4xl font-bold leading-tight text-indigo-900 sm:text-5xl">
+            خدمات شاملة وموثوقة لتغطية أي موقف طارئ
           </h2>
-          <p className="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
-            نقدم مجموعة متكاملة من خدمات السيارات بأعلى معايير الجودة والاحترافية
+          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-slate-700">
+            نقدم حلولاً احترافية تجمع بين السرعة، الجودة، وثقة العميل في كل خطوة.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          {services.map((service, index) => (
-            <div key={index} className="group">
-              {/* Service Card */}
-              <div className="bg-stone-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-200 h-full">
-                {/* Image Section */}
-                <div className="relative h-56 overflow-hidden">
-                  <img 
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-indigo-900/25"></div>
-                  
-                  {/* Icon Overlay */}
-                  <div className="absolute top-4 right-4 bg-stone-50/90 backdrop-blur-sm p-3 rounded-xl">
-                    <service.icon className="w-7 h-7 text-indigo-700" />
-                  </div>
-
-                  {/* Title Overlay */}
-                  <div className="absolute bottom-4 right-4 left-4">
-                    <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                  </div>
+        <div className="mb-20 grid gap-8 lg:grid-cols-3">
+          {services.map((service) => (
+            <article key={service.title} className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+              <div className="relative h-56 overflow-hidden">
+                <img src={service.image} alt={service.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent" />
+                <div className="absolute right-4 top-4 rounded-2xl bg-white/90 p-3 shadow-lg backdrop-blur-sm">
+                  <service.icon className="h-7 w-7 text-indigo-700" />
                 </div>
-                
-                {/* Content Section */}
-                <div className="p-8">
-                  <p className="text-slate-700 mb-6 leading-relaxed text-lg">{service.description}</p>
-                  
-                  <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-3 text-slate-700">
-                        <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
-                        <span className="font-medium">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="absolute bottom-4 right-4 left-4">
+                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 </div>
               </div>
-            </div>
+              <div className="p-8">
+                <p className="mb-6 text-lg leading-relaxed text-slate-700">{service.description}</p>
+                <ul className="space-y-3">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-center gap-3 text-slate-700">
+                      <div className="h-2.5 w-2.5 rounded-full bg-indigo-500" />
+                      <span className="font-medium">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
           ))}
         </div>
 
-        {/* Benefits Section */}
-        <div className="bg-gradient-to-br from-indigo-800 to-blue-700 rounded-3xl p-12 text-stone-50">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              لماذا تختارنا؟
-            </h3>
-            <p className="text-blue-100 text-xl max-w-2xl mx-auto">
-              نتميز بالجودة والاحترافية في كل ما نقدمه
+        <div className="rounded-[2rem] bg-gradient-to-br from-indigo-800 to-blue-700 p-8 text-stone-50 sm:p-12">
+          <div className="mb-10 text-center">
+            <h3 className="mb-4 text-3xl font-bold sm:text-4xl">لماذا تختارنا؟</h3>
+            <p className="mx-auto max-w-2xl text-xl text-blue-100">
+              نتميز بالجودة والاحترافية في كل ما نقدمه مع تركيز واضح على الراحة والثقة.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl inline-block mb-6 group-hover:bg-white/15 transition-all duration-300">
-                  <benefit.icon className="w-10 h-10 text-stone-50" />
+          <div className="grid gap-8 md:grid-cols-3">
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className="rounded-3xl border border-white/10 bg-white/10 p-7 text-center backdrop-blur-sm">
+                <div className="mb-6 inline-flex rounded-2xl bg-white/15 p-4">
+                  <benefit.icon className="h-10 w-10 text-stone-50" />
                 </div>
-                <h4 className="text-xl font-semibold mb-3">{benefit.title}</h4>
-                <p className="text-blue-100 text-lg leading-relaxed">{benefit.description}</p>
+                <h4 className="mb-3 text-xl font-semibold">{benefit.title}</h4>
+                <p className="text-lg leading-relaxed text-blue-100">{benefit.description}</p>
               </div>
             ))}
           </div>

@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, Clock, MapPin, AlertTriangle } from 'lucide-react';
+import { AlertTriangle, Clock, MapPin, MessageCircle, Phone } from 'lucide-react';
 
 export default function CallToAction() {
   const handleCallNow = () => {
@@ -11,93 +11,75 @@ export default function CallToAction() {
 
   return (
     <>
-      <section className="py-20 bg-gradient-to-br from-indigo-900 to-blue-800 relative overflow-hidden" dir="rtl">
-        <div className="max-w-6xl mx-auto px-4 relative z-10">
-          {/* Emergency Banner */}
-          <div className="bg-orange-600 text-white text-center py-4 rounded-2xl mb-12 shadow-lg">
+      <section className="relative overflow-hidden bg-gradient-to-br from-indigo-900 to-blue-800 py-20" dir="rtl">
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 rounded-[1.5rem] bg-orange-600 px-6 py-4 text-center text-white shadow-lg">
             <div className="flex items-center justify-center gap-3">
-              <AlertTriangle className="w-6 h-6" />
-              <span className="font-bold text-lg">حالة طوارئ؟ اتصل الآن - متاحون 24 ساعة!</span>
+              <AlertTriangle className="h-6 w-6" />
+              <span className="text-lg font-bold">حالة طوارئ؟ اتصل الآن - متاحون 24 ساعة!</span>
             </div>
           </div>
 
-          {/* Main CTA */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-stone-50 mb-6 leading-tight">
-              تحتاج مساعدة فورية؟
-            </h2>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              لا تبقى عالقاً في الطريق! اتصل بنا الآن واحصل على خدمة سريعة واحترافية
+          <div className="mb-12 text-center">
+            <h2 className="mb-6 text-4xl font-bold leading-tight text-stone-50 sm:text-5xl">تحتاج مساعدة فورية؟</h2>
+            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-blue-100 sm:text-2xl">
+              لا تبقَ عالقاً في الطريق! اتصل بنا الآن واحصل على خدمة سريعة واحترافية في أي وقت.
             </p>
           </div>
 
-          {/* Contact Methods */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-            <button 
-              onClick={handleCallNow}
-              className="bg-stone-50 hover:bg-white text-indigo-900 p-8 rounded-2xl font-bold transition-all duration-300 flex flex-col items-center gap-4 shadow-lg hover:shadow-xl transform hover:scale-105 group"
-            >
-              <Phone className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
+          <div className="mx-auto mb-12 grid max-w-4xl gap-8 md:grid-cols-2">
+            <button onClick={handleCallNow} className="group flex flex-col items-center gap-4 rounded-[1.5rem] bg-stone-50 p-8 font-bold text-indigo-900 shadow-lg transition hover:-translate-y-1 hover:bg-white hover:shadow-xl">
+              <Phone className="h-12 w-12 transition duration-300 group-hover:scale-110" />
               <div>
-                <div className="text-2xl font-bold mb-2">اتصال مباشر</div>
-                <div className="text-slate-700 text-lg">+965 1234 5678</div>
+                <div className="mb-2 text-2xl font-bold">اتصال مباشر</div>
+                <div className="text-lg text-slate-700">+965 1234 5678</div>
               </div>
             </button>
 
-            <button 
-              onClick={handleWhatsApp}
-              className="bg-green-600 hover:bg-green-700 text-stone-50 p-8 rounded-2xl font-bold transition-all duration-300 flex flex-col items-center gap-4 shadow-lg hover:shadow-xl transform hover:scale-105 group"
-            >
-              <MessageCircle className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
+            <button onClick={handleWhatsApp} className="group flex flex-col items-center gap-4 rounded-[1.5rem] bg-green-600 p-8 font-bold text-stone-50 shadow-lg transition hover:-translate-y-1 hover:bg-green-700 hover:shadow-xl">
+              <MessageCircle className="h-12 w-12 transition duration-300 group-hover:scale-110" />
               <div>
-                <div className="text-2xl font-bold mb-2">واتساب</div>
-                <div className="text-green-100 text-lg">رسالة سريعة</div>
+                <div className="mb-2 text-2xl font-bold">واتساب</div>
+                <div className="text-lg text-green-100">رسالة سريعة ومباشرة</div>
               </div>
             </button>
           </div>
 
-          {/* Response Time */}
-          <div className="text-center mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto border border-white/20">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Clock className="w-5 h-5 text-stone-50" />
-                <p className="text-stone-50 text-lg">متوسط وقت الاستجابة: 15-30 دقيقة</p>
+          <div className="mt-12 text-center">
+            <div className="mx-auto max-w-2xl rounded-[1.5rem] border border-white/20 bg-white/10 p-6 backdrop-blur-sm">
+              <div className="mb-2 flex items-center justify-center gap-2">
+                <Clock className="h-5 w-5 text-stone-50" />
+                <p className="text-lg text-stone-50">متوسط وقت الاستجابة: 15–30 دقيقة</p>
               </div>
-              <p className="text-blue-100 font-semibold">
-                خدمة احترافية تستحق الثقة
-              </p>
+              <p className="font-semibold text-blue-100">خدمة احترافية تستحق الثقة</p>
             </div>
           </div>
         </div>
       </section>
-      
-      {/* Service Areas - Separate Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-white relative" dir="rtl">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <MapPin className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-            <h3 className="text-4xl font-bold text-indigo-900 mb-4">نغطي جميع مناطق الكويت</h3>
-            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-              أينما كنت في الكويت، نصل إليك بأسرع وقت ممكن
+
+      <section className="relative bg-gradient-to-br from-blue-50 to-white py-16" dir="rtl">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <MapPin className="mx-auto mb-4 h-12 w-12 text-indigo-600" />
+            <h3 className="mb-4 text-4xl font-bold text-indigo-900">نغطي جميع مناطق الكويت</h3>
+            <p className="mx-auto max-w-3xl text-xl text-slate-700">
+              أينما كنت في الكويت، نصل إليك بأسرع وقت ممكن مع نفس المستوى من الاحترافية.
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {[
-              "العاصمة", "حولي", "الفروانية", "الجهراء",
-              "الأحمدي", "مبارك الكبير", "جميع المناطق", "الطرق السريعة"
-            ].map((area, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-200 hover:bg-white hover:shadow-lg transition-all duration-300 group">
-                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-indigo-200 transition-colors duration-300">
-                  <MapPin className="w-6 h-6 text-indigo-600" />
+
+          <div className="grid gap-6 text-center sm:grid-cols-2 md:grid-cols-4">
+            {['العاصمة', 'حولي', 'الفروانية', 'الجهراء', 'الأحمدي', 'مبارك الكبير', 'جميع المناطق', 'الطرق السريعة'].map((area) => (
+              <div key={area} className="rounded-[1.25rem] border border-blue-200 bg-white/80 p-6 shadow-sm transition hover:bg-white hover:shadow-lg">
+                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100">
+                  <MapPin className="h-6 w-6 text-indigo-600" />
                 </div>
-                <div className="text-indigo-900 font-bold text-lg">{area}</div>
+                <div className="text-lg font-bold text-indigo-900">{area}</div>
               </div>
             ))}
           </div>
-          
-          <div className="text-center mt-12">
-            <div className="inline-block bg-green-100 text-green-800 px-8 py-4 rounded-full font-bold text-lg">
+
+          <div className="mt-12 text-center">
+            <div className="inline-flex rounded-full bg-green-100 px-8 py-4 text-lg font-bold text-green-800">
               ✅ تغطية شاملة - خدمة متاحة في جميع الأوقات
             </div>
           </div>

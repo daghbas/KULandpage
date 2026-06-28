@@ -1,149 +1,114 @@
-import { Battery, Circle, Wrench, ArrowRight, Star, CheckCircle } from 'lucide-react';
+import { ArrowRight, Battery, CheckCircle, Circle, Star, Wrench } from 'lucide-react';
+import serviceImageOne from '../../../assets/images/academic-reports.webp';
+import serviceImageTwo from '../../../assets/images/custom-software.webp';
+import serviceImageThree from '../../../assets/images/landing-pages.webp';
 
 export default function ServicesShowcase() {
   const services = [
     {
       icon: Circle,
-      title: "تبديل الإطارات",
-      description: "تبديل سريع واحترافي لجميع أنواع الإطارات في موقعك",
-      image: "https://mocha-cdn.com/0199a6e3-aa03-7d21-a627-6de5590066c7/tire-service-action.jpg",
-      features: ["وصول خلال 20 دقيقة", "جميع المقاسات متوفرة", "ضمان شامل"],
-      price: "ابتداءً من 15 د.ك"
+      title: 'تبديل الإطارات',
+      description: 'خدمة فورية مع فريق مدرب ومعدات حديثة لضمان التثبيت الآمن.',
+      image: serviceImageOne,
+      features: ['وصول خلال 20 دقيقة', 'جميع المقاسات متوفرة', 'ضمان شامل'],
+      price: 'ابتداءً من 15 د.ك'
     },
     {
       icon: Battery,
-      title: "تبديل البطاريات",
-      description: "بطاريات عالية الجودة مع فحص شامل للنظام الكهربائي",
-      image: "https://mocha-cdn.com/0199a6e3-aa03-7d21-a627-6de5590066c7/battery-service-action.jpg",
-      features: ["فحص مجاني", "بطاريات أصلية", "ضمان سنة كاملة"],
-      price: "ابتداءً من 25 د.ك"
+      title: 'تبديل البطاريات',
+      description: 'بطاريات أصلية مع فحص شامل للنظام الكهربائي قبل التركيب.',
+      image: serviceImageTwo,
+      features: ['فحص مجاني', 'بطاريات أصلية', 'ضمان سنة كاملة'],
+      price: 'ابتداءً من 25 د.ك'
     },
     {
       icon: Wrench,
-      title: "إصلاحات طارئة",
-      description: "حلول سريعة وموثوقة للأعطال الطارئة في الطريق",
-      image: "https://mocha-cdn.com/0199a6e3-aa03-7d21-a627-6de5590066c7/emergency-repair-service.jpg",
-      features: ["تشخيص دقيق", "قطع غيار أصلية", "إصلاح فوري"],
-      price: "حسب نوع العطل"
+      title: 'إصلاحات طارئة',
+      description: 'حلول سريعة وموثوقة للأعطال في أي وقت وفي أي مكان.',
+      image: serviceImageThree,
+      features: ['تشخيص دقيق', 'قطع غيار أصلية', 'إصلاح فوري'],
+      price: 'حسب نوع العطل'
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50" dir="rtl">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-stone-50 px-8 py-4 rounded-full font-bold mb-8 text-lg">
+    <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20" dir="rtl">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 text-center">
+          <div className="mb-8 inline-flex rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-8 py-4 text-lg font-bold text-stone-50 shadow-lg">
             ⚡ خدماتنا المميزة
           </div>
-          
-          <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-8 leading-tight">
-            نحل مشاكلك بأفضل الطرق
+          <h2 className="mb-6 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">
+            نحل مشاكلك بأسرع وأقوى طريقة
           </h2>
-          <p className="text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
-            فريق محترف يصل إليك خلال دقائق مع أحدث المعدات وأفضل الأسعار
+          <p className="mx-auto max-w-4xl text-xl leading-relaxed text-slate-700">
+            فريق محترف يصل إليك خلال دقائق مع أحدث المعدات وأفضل الأسعار في الكويت.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="mb-16 grid gap-8 lg:grid-cols-3">
           {services.map((service, index) => (
-            <div key={index} className="group relative">
-              {/* Main Card */}
-              <div className="relative overflow-hidden rounded-3xl bg-white shadow-2xl border border-slate-200 transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl">
-                {/* Image Section */}
+            <article key={service.title} className="group relative">
+              <div className="relative overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-2xl transition duration-500 hover:-translate-y-1 hover:shadow-3xl">
                 <div className="relative h-72 overflow-hidden">
-                  <img 
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent"></div>
-                  
-                  {/* Icon Badge */}
-                  <div className="absolute top-6 right-6">
-                    <div className="bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-lg">
-                      <service.icon className="w-8 h-8 text-orange-500" />
-                    </div>
+                  <img src={service.image} alt={service.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
+                  <div className="absolute right-6 top-6 rounded-2xl bg-white/95 p-4 shadow-lg backdrop-blur-sm">
+                    <service.icon className="h-8 w-8 text-orange-500" />
                   </div>
-
-                  {/* Price Badge */}
-                  <div className="absolute top-6 left-6">
-                    <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full font-bold text-sm">
-                      {service.price}
-                    </div>
+                  <div className="absolute left-6 top-6 rounded-full bg-gradient-to-r from-emerald-500 to-emerald-600 px-4 py-2 text-sm font-bold text-white">
+                    {service.price}
                   </div>
-
-                  {/* Title on Image */}
                   <div className="absolute bottom-6 right-6 left-6">
-                    <h3 className="text-3xl font-bold text-white mb-2">{service.title}</h3>
+                    <h3 className="mb-2 text-3xl font-bold text-white">{service.title}</h3>
                     <div className="flex items-center gap-2">
-                      <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                      <span className="text-white font-semibold">4.9 تقييم ممتاز</span>
+                      <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                      <span className="font-semibold text-white">4.9 تقييم ممتاز</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Content Section */}
                 <div className="p-8">
-                  <p className="text-slate-700 text-lg leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="space-y-3 mb-8">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-500" />
-                        <span className="text-slate-700 font-medium">{feature}</span>
+                  <p className="mb-6 text-lg leading-relaxed text-slate-700">{service.description}</p>
+                  <div className="mb-8 space-y-3">
+                    {service.features.map((feature) => (
+                      <div key={feature} className="flex items-center gap-3">
+                        <CheckCircle className="h-5 w-5 text-green-500" />
+                        <span className="font-medium text-slate-700">{feature}</span>
                       </div>
                     ))}
                   </div>
-
-                  {/* Action Button */}
-                  <button className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 flex items-center justify-center gap-3 group/btn">
+                  <button className="flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 px-6 py-4 font-bold text-white transition hover:from-orange-600 hover:to-red-600">
                     <span className="text-lg">اطلب الخدمة الآن</span>
-                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="h-5 w-5" />
                   </button>
                 </div>
-
-                {/* Hover Effect Glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl"></div>
               </div>
-
-              {/* Floating Element */}
-              <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-lg">{index + 1}</span>
+              <div className="absolute -right-4 -top-4 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-400 to-red-500 text-lg font-bold text-white shadow-lg transition duration-300 group-hover:scale-110">
+                {index + 1}
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        {/* Bottom CTA */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-12 text-white relative overflow-hidden">
-            {/* Background Pattern */}
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-slate-900 to-slate-800 p-8 text-white sm:p-12">
             <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-10 right-10 w-32 h-32 bg-orange-500 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-10 left-10 w-24 h-24 bg-red-500 rounded-full blur-3xl"></div>
+              <div className="absolute right-10 top-10 h-32 w-32 rounded-full bg-orange-500 blur-3xl" />
+              <div className="absolute bottom-10 left-10 h-24 w-24 rounded-full bg-red-500 blur-3xl" />
             </div>
-            
             <div className="relative z-10">
-              <h3 className="text-4xl font-bold mb-4">
-                جاهزون لخدمتك على مدار الساعة
-              </h3>
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                فريقنا المتخصص ينتظر اتصالك لحل مشكلتك بأسرع وقت ممكن
+              <h3 className="mb-4 text-3xl font-bold sm:text-4xl">جاهزون لخدمتك على مدار الساعة</h3>
+              <p className="mx-auto mb-8 max-w-3xl text-xl text-slate-300">
+                فريقنا المتخصص ينتظر اتصالك لحل مشكلتك بأسرع وقت ممكن وبأعلى مستوى من الاحترافية.
               </p>
-              
-              <div className="flex flex-col md:flex-row gap-6 justify-center">
-                <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
+              <div className="flex flex-col justify-center gap-6 md:flex-row">
+                <button className="flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 px-8 py-4 text-lg font-bold text-white transition hover:from-orange-600 hover:to-red-600">
                   <span>اتصل الآن</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="h-5 w-5" />
                 </button>
                 <div className="flex items-center justify-center gap-3 text-slate-300">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <div className="h-3 w-3 animate-pulse rounded-full bg-green-400" />
                   <span className="font-semibold">متاح الآن - وصول خلال 20 دقيقة</span>
                 </div>
               </div>
